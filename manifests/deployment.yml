@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: shubhjazuredevopsaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shubhjazuredevopsaks
+  template:
+    metadata:
+      labels:
+        app: shubhjazuredevopsaks 
+    spec:
+      containers:
+        - name: shubhjazuredevopsaks 
+          image: kontainer.azurecr.io/shubhjazuredevopsaks
+          ports:
+          - containerPort: 80
