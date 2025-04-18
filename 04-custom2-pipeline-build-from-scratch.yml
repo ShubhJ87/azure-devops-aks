@@ -29,7 +29,7 @@ stages:
             Dockerfile: '**/Dockerfile'
             tags: 
               $(tag)
-              $(Build.BuildId)
+              $(Build.SourceVersion)
         # Task-2: Copy files (Copy files from a source folder to target folder)
         - task: CopyFiles@2
           inputs:
